@@ -1,0 +1,156 @@
+/* this is main CSS */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+
+:root {
+  --dbg: #123;
+  --wbg: #fff;
+  --mainBlue: #0080ff;
+  --dText: #123;
+  --wText: #FFF;
+  --border: hsla(210, 50%, 13%, 0.2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  direction: rtl;
+  background-color: var(--dbg);
+  color: var(--wText);
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  position: relative;
+}
+
+.abdsy {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  width: 350px;
+  background-color: var(--wbg);
+  border-radius: 10px;
+  position: relative;
+  color: var(--dText);
+}
+
+.hero-img {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid var(--wbg);
+}
+
+.hero-img img {
+  width: 400px;
+  height: 175px;
+}
+
+.hero-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 175px;
+  background-color: var(--dbg);
+  opacity: 0.5;
+}
+
+.github {
+  color: var(--mainBlue);
+  transition: 0.5s color ease;
+}
+
+.github:hover {
+  color: var(--dText);
+}
+
+.icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  font-size: 28px;
+}
+
+.github::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  rotate: 45deg;
+  border-radius: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: var(--wbg);
+  z-index: 1;
+}
+
+.profile-img img {
+  position: absolute;
+  border-radius: 50%;
+  width: 125px;
+  top: 115px;
+  left: 25px;
+  outline: 5px solid var(--wbg);
+}
+
+.block-content {
+  padding: 0 25px;
+}
+
+.name {
+  font-size: 32px;
+  margin-bottom: -5px;
+  color: var(--mainBlue);
+}
+
+.title {
+  font-size: 18px;
+  opacity: 0.5;
+  margin-bottom: 5px;
+}
+
+.bio {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.bio  i {
+  color: var(--mainBlue);
+  transition: 0.5s color ease;
+}
+
+.bio  i:hover {
+  color: var(--dText);
+}
+
+.cta-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--mainBlue);
+  text-decoration: none;
+  color: var(--wText);
+  font-size: 20px;
+  margin-bottom: 25px;
+  transition: 0.5s background-color ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--dbg);
+}
