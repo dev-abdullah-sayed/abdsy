@@ -62,7 +62,7 @@ body {
   width: 400px;
   height: 175px;
   background-color: var(--dbg);
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .github {
@@ -93,6 +93,27 @@ body {
   height: 35px;
   background-color: var(--wbg);
   z-index: 1;
+}
+
+.contact-me {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  direction: ltr;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.contact-me a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--wText);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .profile-img img {
@@ -135,6 +156,8 @@ body {
 .bio  i:hover {
   color: var(--dText);
 }
+
+
 
 .cta-btn {
   display: flex;
