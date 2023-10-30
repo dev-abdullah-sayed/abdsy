@@ -1,0 +1,141 @@
+/* Header CSS */
+.header {
+  padding: 10px 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bgc);
+  border-bottom: 2px solid #fff;
+  box-shadow: 1px 1px 3px var(--dbT);
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--royalblue);
+  font-size: 1.7rem;
+  transition: 0.3s color ease;
+
+}
+
+.logo-link i {
+  font-size: 1rem;
+  color: var(--royalblue);
+  background-color: var(--rbT);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+
+.logo-link:hover {
+  color: var(--darkblue);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--darkblue);
+  font-weight: 500;
+  transition: 0.3s color ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  border-radius: 50px;
+  background-color: var(--royalblue);
+  opacity: 0;
+  transition: 0.3s opacity ease;
+}
+
+.nav-link:hover {
+  color: var(--royalblue);
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+.miniNav {
+  display: none;
+}
+
+/* Header Media */
+@media screen and (max-width: 420px) {
+  .header {
+    padding: 10px 25px;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .miniNav {
+    display: flex;
+  }
+
+  .miniNav-btn i {
+    font-size: 1.5rem;
+    color: var(--royalblue);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .header {
+    padding: 10px 25px;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .miniNav {
+    display: flex;
+  }
+
+  .miniNav-btn i {
+    font-size: 1.5rem;
+    color: var(--royalblue);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .header {
+    padding: 10px 25px;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .miniNav {
+    display: flex;
+  }
+
+  .miniNav-btn i {
+    font-size: 1.5rem;
+    color: var(--royalblue);
+  }
+}
