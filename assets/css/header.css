@@ -1,13 +1,20 @@
+:root {
+  --bar-width: 25px;
+  --bar-height: 3px;
+  --humburger-gap: 5px;
+  --animation-timing: 200ms ease-in-out;
+  --humburger-height: calc(var(--bar-height) * 3 + var(--humburger-gap) * 2);
+
+}
+
 /* Header CSS */
 .header {
-  padding: 10px 200px;
+  padding: 15px 10%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bgc);
-  border-bottom: 2px solid #fff;
-  box-shadow: 1px 1px 3px var(--dbT);
   position: fixed;
   top: 0;
   right: 0;
@@ -17,6 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: max-content;
   gap: 5px;
   text-decoration: none;
   color: var(--royalblue);
@@ -40,6 +48,8 @@
 .logo-link:hover {
   color: var(--darkblue);
 }
+
+/* Desktop Navbar */
 
 .nav-links {
   display: flex;
@@ -78,64 +88,84 @@
   opacity: 1;
 }
 
-.miniNav {
+/* Mobile Navbar */
+#mobile-nav {
   display: none;
+  position: relative;
+}
+
+.humburger-menu {
+  direction: ltr;
+  --x-width: calc(var(--humburger-height) * 1.41421356237);
+  display: flex;
+  flex-direction: column;
+  gap: var(--humburger-gap);
+  width: max-content;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 9;
+}
+
+.humburger-menu::after,
+.humburger-menu::before,
+.humburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--royalblue);
+  border-radius: 55px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing),
+    width var(--animation-timing),
+    rotate var(--animation-timing),
+    translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.humburger-menu input {
+  appearance: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.humburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.humburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.humburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.menu-links {
+  transition: translate var(--animation-timing);
+  /* translate:  -200%; */
+  padding: 0.5rem 1rem;
+  
+  background-color: var(--royalblue);
+  max-width: 10rem;
 }
 
 /* Header Media */
-@media screen and (max-width: 420px) {
-  .header {
-    padding: 10px 25px;
-  }
-
-  .nav-bar {
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
     display: none;
   }
 
-  .miniNav {
+  #mobile-nav {
     display: flex;
-  }
-
-  .miniNav-btn i {
-    font-size: 1.5rem;
-    color: var(--royalblue);
-  }
-}
-
-@media screen and (max-width: 920px) {
-  .header {
-    padding: 10px 25px;
-  }
-
-  .nav-bar {
-    display: none;
-  }
-
-  .miniNav {
-    display: flex;
-  }
-
-  .miniNav-btn i {
-    font-size: 1.5rem;
-    color: var(--royalblue);
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .header {
-    padding: 10px 25px;
-  }
-
-  .nav-bar {
-    display: none;
-  }
-
-  .miniNav {
-    display: flex;
-  }
-
-  .miniNav-btn i {
-    font-size: 1.5rem;
-    color: var(--royalblue);
   }
 }
