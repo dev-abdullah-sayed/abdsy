@@ -1,36 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+
 
 /* Header CSS */
+
 @import url(../css/header.css);
+
 @import url(../css/home.css);
 
+
+
 :root {
+
   /* main Color */
+
   --royalblue: #5271FF;
+
   --darkblue: hsla(210, 50%, 13%, 80%);
 
+
+
   /* Background Color */
+
   --bgc: #F5F7FD;
+
   --rbT: hsla(225, 73%, 57%, 10%);
+
   --dbT: hsla(210, 50%, 13%, 25%);
 
+
+
 }
+
+
 
 *,
+
 *::before,
+
 *::after {
+
   padding: 0;
+
   margin: 0;
+
   box-sizing: border-box;
+
   scroll-behavior: smooth;
+
 }
 
+
+
 body {
+
   direction: rtl;
+
   min-height: 100vh;
+
   background-color: var(--bgc);
-  font-family: 'Baloo Bhaijaan 2', sans-serif;
-  font-weight: 400;
+
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+
   font-size: 10px;
+
   color: var(--darkblue)
+
 }
+
