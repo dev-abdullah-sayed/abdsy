@@ -1,11 +1,14 @@
 /* Header CSS */
 .header {
-  padding: 25px 10%;
+  padding: 10px 10%;
   width: 100%;
-  background-color: var(--bgc);
+  background-color: var(--royalblue);
+  /* box-shadow: 5px 5px 5px hsla(210, 50%, 13%, 10%);
+  border-bottom: 2px solid hsla(210, 50%, 13%, 7%); */
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 999;
 }
 
 /* Desktop Navbar */
@@ -19,8 +22,8 @@
 .logo-img {
   background-image: url(../images/abdsy-logo.png);
   background-size: contain;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
@@ -33,10 +36,9 @@
 
 .desktop-nav-link {
   text-decoration: none;
-  height: 50px;
   font-size: 1.2rem;
-  color: var(--darkblue);
-  font-weight: 500;
+  color: var(--bgc);
+  font-weight: 400;
   transition: 0.3s color ease;
   position: relative;
 }
@@ -45,16 +47,12 @@
   content: "";
   position: absolute;
   right: 0;
-  bottom: 15px;
+  bottom: -5px;
   width: 0px;
   height: 2px;
   border-radius: 50px;
-  background-color: var(--royalblue);
+  background-color: var(--bgc);
   transition: 0.3s width ease;
-}
-
-.desktop-nav-link:hover {
-  color: var(--royalblue);
 }
 
 .desktop-nav-link:hover::after {
@@ -79,7 +77,7 @@
 @media screen and (max-width: 800px) {
   .header {
     padding: 15px 10%;
-    background-color: var(--royalblue);
+    background-color: var(--darkblue);
   }
 
   #desktop-nav {
@@ -90,3 +88,4 @@
     display: flex;
   }
 }
+
