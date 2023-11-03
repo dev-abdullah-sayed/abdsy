@@ -1,51 +1,66 @@
 /* Home Section CSS */
 
+svg:not(:root) {
+  overflow: hidden;
+}
+
 .home {
-  padding-top: 100px;
   width: 100%;
   height: 100vh;
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  background-color: var(--royalblue);
+  position: relative;
 }
 
 .profile {
   position: relative;
   background-color: #fff;
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 300px;
   border-radius: 10px;
   padding: 0 25px;
+  padding-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column wrap;
-  padding-top: 75px;
+  gap: 25px;
+}
+
+.profile-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .profile-pic {
   position: absolute;
-  top: -75px;
-  width: 150px;
+  top: -150px;
+  width: 200px;
+  outline: 10px solid #fff;
+  border-radius: 50%;
 }
 
 .profile-name {
-  font-size: 2rem;
-  color: var(--royalblue);
-  margin-bottom: -5px;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: -10px;
 }
 
 .profile-title {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 1.3rem;
+  color: var(--royalblue);
 }
 
 .profile-my-tech {
   direction: ltr;
   display: flex;
   gap: 5px;
-  margin-bottom: 10px;
 }
 
 .tech {
@@ -55,6 +70,7 @@
   height: 20px;
   text-transform: uppercase;
   color: #fff;
+  font-size: 0.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +96,43 @@
 
 .profile-contact a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--darkblue);
+}
+
+.waves-home {
+  position: absolute;
+  width: 100%;
+  height: 125px;
+  bottom: 0;
+  /* Fix For Safari Gap */
+  min-height: 100px;
+  max-height: 200px;
+}
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }
