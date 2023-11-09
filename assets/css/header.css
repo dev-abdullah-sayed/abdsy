@@ -1,0 +1,111 @@
+/* Header CSS */
+.header {
+  padding: 10px 10%;
+  width: 100%;
+  background-color: var(--royalblue);
+  /* box-shadow: 5px 5px 5px hsla(210, 50%, 13%, 10%);
+  border-bottom: 2px solid hsla(210, 50%, 13%, 7%); */
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Desktop Navbar */
+
+#desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  background-image: url(../images/abdsy-logo.png);
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.desktop-nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.desktop-nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--bgc);
+  font-weight: 400;
+  transition: 0.3s color ease;
+  position: relative;
+}
+
+.desktop-nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 0px;
+  height: 2px;
+  border-radius: 50px;
+  background-color: var(--bgc);
+  transition: 0.3s width ease;
+}
+
+.desktop-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Navbar */
+#mobile-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.mobile-nav-links {
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  gap: 10px;
+  background-color: var(--darkblue);
+  outline: 1px solid #fff;
+  position: absolute;
+  width: 100%;
+  top: 71px;
+  right: 0;
+  padding: 10px 7%;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--bgc);
+  font-size: 1.2rem;
+}
+
+/* Header Media */
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 0;
+    background-color: var(--darkblue);
+  }
+
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
+    padding: 10px 7%;
+  }
+}
