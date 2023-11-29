@@ -186,7 +186,6 @@ html {
   }
   .hero {
     padding: 0;
-    padding-top: 125px;
     height: calc(100svh + 100px);
     justify-content: center;
     align-items: center;
@@ -231,7 +230,7 @@ html {
   }
   .hero {
     padding: 0;
-    padding-top: 125px;
+    
     height: calc(100svh + 100px);
     justify-content: center;
     align-items: center;
@@ -276,7 +275,7 @@ html {
   }
   .hero {
     padding: 0;
-    padding-top: 125px;
+    
     height: calc(100svh + 100px);
     justify-content: center;
     align-items: center;
