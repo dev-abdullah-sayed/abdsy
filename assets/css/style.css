@@ -175,16 +175,19 @@ html {
 
 @media (min-width: 320px) and (max-width: 480px) {
   .header {
-    padding: 25px;
-    gap: 10px;
+    padding: 0px;
     flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     .nav-links .nav-link {
       font-size: 1.5rem;
     }
   }
   .hero {
     padding: 0;
-    height: calc(100svh + 100px);
+    padding-top: 125px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-flow: column-reverse;
@@ -217,16 +220,19 @@ html {
 
 @media (min-width: 481px) and (max-width: 768px) {
     .header {
-    padding: 25px;
+    padding: 0px;
     flex-flow: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     .nav-links .nav-link {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
   }
   .hero {
     padding: 0;
-    height: calc(100svh + 100px);
+    padding-top: 125px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-flow: column-reverse;
@@ -260,22 +266,24 @@ html {
 @media (min-width: 768px) and (max-width: 1024px) {
   .header {
     padding: 10px 50px;
-    gap: 10px;
     flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
     .nav-links .nav-link {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
   }
   .hero {
-    padding: 0 50px;
-    width: 100%;
-    height: calc(100svh + 100px);
+    padding: 0;
+    padding-top: 125px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-flow: column-reverse;
   }
   .hero-content {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     .wlc {
@@ -296,31 +304,20 @@ html {
   }
 
   .hero-img img{
-    width: 250px;
+    width: 300px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
   .header {
-    padding: 10px 50px;
+    padding: 10px 100px;
     gap: 10px;
     flex-flow: row;
     .nav-links .nav-link {
       font-size: 1.7rem;
     }
   }
-  .hero {
-    padding: 0 50px;
-    width: 100%;
-    height: calc(100svh + 100px);
-    justify-content: center;
-    align-items: center;
-    flex-flow: column-reverse;
-  }
   .hero-content {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     .wlc {
       font-size: 3.5rem;
     }
@@ -339,40 +336,16 @@ html {
   }
 
   .hero-img img{
-    width: 250px;
+    width: 450px;
   }
 }
 
 @media (min-width: 1201px) and (max-width: 1900px) {
   .header {
-    padding: 10px 200px;
     gap: 10px;
     flex-flow: row;
     .nav-links .nav-link {
       font-size: 1.7rem;
     }
   }
-  .hero-content {
-    .wlc {
-      font-size: 3.5rem;
-    }
-    .name {
-      font-size: 4.5rem;
-      margin-bottom: -35px;
-    }
-    .job-title {
-      font-size: 3rem;
-      margin-bottom: -10px;
-    }
-    .bio {
-      width: 350px;
-      font-size: 1.7rem;
-    }
-  }
-
-  .hero-img img{
-    width: 500px;
-  }
 }
-
-
