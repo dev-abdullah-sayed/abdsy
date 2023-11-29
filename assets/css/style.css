@@ -1,0 +1,378 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+
+/* Global CSS */
+:root {
+  --bg-darkblue: rgb(17, 33, 50);
+  --gray-50: rgb(225, 225, 225);
+  --gray-100: rgb(150, 150, 150);
+  --blue-400: rgb(82, 113, 255);
+  --p-20rem: 1rem 35rem;
+  --gap: 2.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: var(--gray-50);
+  text-decoration: none;
+}
+
+html {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 10px;
+}
+
+.cta-btn {
+  background-color: var(--blue-400);
+  padding: 0.5em 1.5em;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 7px;
+  transition: 0.3s box-shadow linear;
+}
+
+.cta-btn:hover {
+  box-shadow: 0px 0px 10px rgba(82, 113, 255, 2);
+}
+
+/* header css */
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--p-20rem);
+  background-color: var(--bg-darkblue);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header .logo {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.header .logo .text-blue {
+  position: relative;
+}
+
+.header .logo .text-blue::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background-color: var(--blue-400);
+  transition: 0.3s width linear;
+}
+
+.header .logo:hover .text-blue::after {
+  width: 100%;
+}
+
+.header .nav-links {
+  display: flex;
+  gap: var(--gap);
+}
+
+.header .nav-links .nav-link {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: relative;
+  transition: 0.3s color linear;
+}
+
+.header .nav-links .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  height: 2px;
+  background-color: var(--gray-50);
+  transition: 0.3s width linear;
+}
+
+.header .nav-links .nav-link:hover::after {
+  width: 100%;
+}
+
+.text-blue {
+  color: var(--blue-400);
+}
+
+/* hero section */
+.hero {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-darkblue);
+  padding: var(--p-20rem);
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  gap: var(--gap);
+}
+
+.hero-content .wlc {
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: -32px;
+}
+
+.hero-content .name {
+  font-size: 7rem;
+  text-transform: capitalize;
+  color: var(--blue-400);
+  margin-bottom: -25px;
+}
+
+.hero-content .job-title {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.hero-content .bio {
+  font-size: 1.5rem;
+  width: 400px;
+  color: var(--gray-100);
+  text-wrap: balance;
+}
+
+.hero-social {
+  display: flex;
+  gap: var(--gap);
+}
+
+.hero-social-link {
+  transition: 0.3s transform linear;
+}
+
+.hero-social-link img {
+  width: 40px;
+}
+
+.hero-social-link:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .header {
+    padding: 25px;
+    gap: 10px;
+    flex-flow: column;
+    .nav-links .nav-link {
+      font-size: 1.5rem;
+    }
+  }
+  .hero {
+    padding: 0;
+    height: calc(100svh + 100px);
+    justify-content: center;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
+  .hero-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .wlc {
+      font-size: 3.5rem;
+    }
+    .name {
+      font-size: 4.5rem;
+      margin-bottom: -35px;
+    }
+    .job-title {
+      font-size: 3rem;
+      margin-bottom: -10px;
+    }
+    .bio {
+      width: 350px;
+      font-size: 1.7rem;
+    }
+  }
+
+  .hero-img img{
+    width: 250px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .header {
+    padding: 25px;
+    flex-flow: column;
+    gap: 10px;
+    .nav-links .nav-link {
+      font-size: 1.7rem;
+    }
+  }
+  .hero {
+    padding: 0;
+    height: calc(100svh + 100px);
+    justify-content: center;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
+  .hero-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .wlc {
+      font-size: 3.5rem;
+    }
+    .name {
+      font-size: 4.5rem;
+      margin-bottom: -35px;
+    }
+    .job-title {
+      font-size: 3rem;
+      margin-bottom: -10px;
+    }
+    .bio {
+      width: 350px;
+      font-size: 1.7rem;
+    }
+  }
+
+  .hero-img img{
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 10px 50px;
+    gap: 10px;
+    flex-flow: row;
+    .nav-links .nav-link {
+      font-size: 1.7rem;
+    }
+  }
+  .hero {
+    padding: 0 50px;
+    width: 100%;
+    height: calc(100svh + 100px);
+    justify-content: center;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
+  .hero-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .wlc {
+      font-size: 3.5rem;
+    }
+    .name {
+      font-size: 4.5rem;
+      margin-bottom: -35px;
+    }
+    .job-title {
+      font-size: 3rem;
+      margin-bottom: -10px;
+    }
+    .bio {
+      width: 350px;
+      font-size: 1.7rem;
+    }
+  }
+
+  .hero-img img{
+    width: 250px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .header {
+    padding: 10px 50px;
+    gap: 10px;
+    flex-flow: row;
+    .nav-links .nav-link {
+      font-size: 1.7rem;
+    }
+  }
+  .hero {
+    padding: 0 50px;
+    width: 100%;
+    height: calc(100svh + 100px);
+    justify-content: center;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
+  .hero-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .wlc {
+      font-size: 3.5rem;
+    }
+    .name {
+      font-size: 4.5rem;
+      margin-bottom: -35px;
+    }
+    .job-title {
+      font-size: 3rem;
+      margin-bottom: -10px;
+    }
+    .bio {
+      width: 350px;
+      font-size: 1.7rem;
+    }
+  }
+
+  .hero-img img{
+    width: 250px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1900px) {
+  .header {
+    padding: 10px 200px;
+    gap: 10px;
+    flex-flow: row;
+    .nav-links .nav-link {
+      font-size: 1.7rem;
+    }
+  }
+  .hero-content {
+    .wlc {
+      font-size: 3.5rem;
+    }
+    .name {
+      font-size: 4.5rem;
+      margin-bottom: -35px;
+    }
+    .job-title {
+      font-size: 3rem;
+      margin-bottom: -10px;
+    }
+    .bio {
+      width: 350px;
+      font-size: 1.7rem;
+    }
+  }
+
+  .hero-img img{
+    width: 500px;
+  }
+}
+
+
