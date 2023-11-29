@@ -195,25 +195,40 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 10px;
     .wlc {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
+      margin: 0;
+      margin-bottom: -15px;
     }
     .name {
-      font-size: 4.5rem;
-      margin-bottom: -35px;
+      font-size: 3.5rem;
+      margin: 0;
+      margin-bottom: -15px;
     }
     .job-title {
-      font-size: 3rem;
-      margin-bottom: -10px;
+      font-size: 2rem;
+      margin: 0;
     }
     .bio {
       width: 350px;
       font-size: 1.7rem;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    .cta-btn {
+      margin-bottom: 10px;
+    }
+    .hero-social {
+      gap: 10px;
+      & img {
+        width: 32px;
+      }
     }
   }
 
   .hero-img img{
-    width: 250px;
+    width: 200px;
   }
 }
 
