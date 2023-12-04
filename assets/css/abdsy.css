@@ -107,7 +107,7 @@ section {
     left: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5px 50px 5px 35px;
+    grid-template-rows: 1fr 5px 50px 5px 40px;
     gap: 10px;
     background-color: white;
     border-top: 1px solid #5271ff;
@@ -115,11 +115,8 @@ section {
     width: 100%;
     height: fit-content;
     padding: 20px;
-  }
-  .header .header-content .navbar .nav-links-mobile .nav-links {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 10px;
+    padding-bottom: 5px;
+    z-index: 999;
   }
   .header .header-content .navbar .nav-links-mobile .nav-links a {
     display: block;
@@ -129,6 +126,7 @@ section {
     border-radius: 5px;
     color: #869cff;
     font-weight: 500;
+    z-index: 999;
   }
   .header .header-content .navbar .nav-links-mobile .nav-links .active {
     background-color: #eef1ff;
@@ -144,7 +142,6 @@ section {
   .header .header-content .navbar .nav-links-mobile .my-data {
     display: flex;
     gap: 10px;
-
     & img {
       width: 45px;
       height: 45px;
@@ -164,6 +161,12 @@ section {
     color: #eef1ff;
     font-size: 18px;
     font-weight: 600;
+  }
+  .header .header-content .navbar .nav-links-mobile .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
   /*  */
 }
