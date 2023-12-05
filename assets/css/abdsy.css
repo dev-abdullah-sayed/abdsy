@@ -11,6 +11,8 @@
   --section-bg: rgba(41, 57, 127, 5%);
   --section-title: rgba(41, 57, 127, 10%);
   --hover-bg: rgba(240, 243, 255, 50%);
+
+  --timing: 0.3s ease-in;
 }
 * {
   padding: 0;
@@ -18,7 +20,7 @@
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
-  scroll-padding-top: 85px;
+  scroll-padding-top: 55px;
 }
 body {
   font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -110,7 +112,7 @@ section {
           padding: 0.25rem 0.5rem;
           border-radius: 5px;
           color: #869cff;
-          transition: 0.3s background-color linear;
+          transition: var(--timing) background-color;
           &:hover:not(.active) {
             background-color: var(--hover-bg);
           }
@@ -148,7 +150,7 @@ section {
           background-color: var(--blue-25);
           color: var(--blue);
           font-size: 14px;
-          transition: 0.3s linear;
+          transition: var(--timing) opacity;
           &::after {
             content: "";
             position: absolute;
@@ -177,6 +179,10 @@ section {
         color: var(--blue-25);
         font-weight: 500;
         border-radius: 99px;
+        transition: var(--timing) scale;
+        &:hover {
+          scale: 1.1;
+        }
       }
     }
   }
@@ -280,7 +286,7 @@ section {
 /* landing section */
 .landing {
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   background: url("../images/abdsy-landing.jpg") no-repeat center;
   background-size: cover;
   position: relative;
@@ -329,9 +335,13 @@ section {
       align-items: center;
       flex-flow: column wrap;
       text-align: center;
+
       gap: 10px;
       background-color: var(--section-bg);
+      border-radius: 10px;
+      box-shadow: 1px 1px 5px rgba(41, 57, 127, 0.15);
       padding: 25px;
+      transition: 0.3s scale linear;
       .srv-title {
         display: flex;
         flex-flow: column wrap;
@@ -344,7 +354,140 @@ section {
           color: var(--darkblue);
         }
       }
+      &:hover {
+        scale: 1.1;
+      }
     }
   }
 }
 /* end services section */
+/* portfolio section */
+.portfolio {
+  height: 100%;
+  background-color: var(--section-bg);
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    padding-top: 50px;
+    .demo {
+      max-height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        visibility: hidden;
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        transition: var(--timing) opacity;
+        background: linear-gradient(0deg, rgba(82, 113, 255, 1) 15%, rgba(82, 113, 255, 0.1) 100%);
+      }
+      .demo-image {
+        width: 100%;
+        height: 100%;
+        transition: 0.4s linear scale;
+      }
+      .demo-content {
+        visibility: hidden;
+        opacity: 0;
+        .demo-title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: var(--blue-25);
+          z-index: 1;
+        }
+        .demo-tech {
+          display: flex;
+          flex-flow: row-reverse;
+          gap: 10px;
+          position: absolute;
+          bottom: 25px;
+          left: 25px;
+          z-index: 1;
+          & span {
+            height: 25px;
+            padding: 0 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 99px;
+            border: 2px solid var(--blue-25);
+            color: var(--blue-25);
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+          .html {
+            background-color: orangered;
+          }
+          .css {
+            background-color: var(--blue);
+          }
+        }
+        .demo-link {
+          display: flex;
+          flex-flow: row-reverse;
+          align-items: center;
+          height: 25px;
+          padding: 0 7px;
+          border-radius: 99px;
+          gap: 5px;
+          position: absolute;
+          bottom: 25px;
+          right: 25px;
+          background-color: var(--blue-25);
+          border: 2px solid var(--blue-50);
+          z-index: 1;
+          transition: var(--timing) scale;
+          &:hover {
+            scale: 1.1;
+          }
+          & img {
+            width: 20px;
+          }
+        }
+      }
+      &:hover {
+        &::after {
+          visibility: visible;
+          opacity: 1;
+        }
+        .demo-content {
+          visibility: visible;
+          opacity: 1;
+        }
+        .demo-image {
+          scale: 1.5;
+        }
+      }
+    }
+  }
+  .cta-portfolio {
+    width: 60%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: var(--blue);
+    color: var(--blue-25);
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 99px;
+    transition: var(--timing) scale;
+    &:hover {
+      scale: 1.1;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+/* end portfolio section */
