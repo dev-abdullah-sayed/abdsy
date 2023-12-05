@@ -7,6 +7,7 @@
   --blue-25: #eef1ff;
   --blue-50: #bac6ff;
   --blue-75: #869cff;
+  --darkblue: #293980;
   --section-bg: rgba(41, 57, 127, 5%);
   --section-title: rgba(41, 57, 127, 10%);
   --hover-bg: rgba(240, 243, 255, 50%);
@@ -17,11 +18,13 @@
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 body {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-family: 15px;
   font-family: 400;
+  color: var(--darkblue);
 }
 /* end reset */
 /* components */
@@ -55,6 +58,22 @@ body {
     max-width: 1140px;
   }
 }
+section {
+  padding: 50px 0;
+}
+.sec-title {
+  text-align: center;
+  font-size: 74px;
+  font-weight: 700;
+  color: var(--section-title);
+  + p {
+    text-align: center;
+    font-size: 54px;
+    font-weight: 700;
+    margin-top: -70px;
+    color: var(--blue);
+  }
+}
 /* end components */
 
 /* header */
@@ -62,6 +81,7 @@ body {
   width: 100%;
   background-color: var(--white);
   position: fixed;
+  scroll-padding: 85px;
   z-index: 999;
   /* header-content desktop */
   .header-content.desktop {
@@ -107,9 +127,49 @@ body {
       align-items: center;
       justify-content: center;
       gap: 20px;
+      .profile {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .tooltip {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%);
+          width: 110px;
+          padding: 0.2rem;
+          border-radius: 5px;
+          visibility: hidden;
+          opacity: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--blue-25);
+          color: var(--blue);
+          font-size: 14px;
+          transition: 0.3s linear;
+          &::after {
+            content: "";
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            transform: translate(-50%);
+            border: 5px solid;
+            border-color: transparent transparent var(--blue-25) transparent;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        &:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
       .cta-contact {
         width: 100px;
-        height: 45px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -220,7 +280,7 @@ body {
 /* landing section */
 .landing {
   width: 100%;
-  height: 100svh;
+  height: 100vh;
   background: url("../images/abdsy-landing.jpg") no-repeat center;
   background-size: cover;
   position: relative;
@@ -254,3 +314,37 @@ body {
     }
   }
 }
+
+/* services section */
+.services {
+  height: 100%;
+  .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    padding-top: 50px;
+    .srv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      text-align: center;
+      gap: 10px;
+      background-color: var(--section-bg);
+      padding: 25px;
+      .srv-title {
+        display: flex;
+        flex-flow: column wrap;
+        color: var(--blue);
+        & span:first-child {
+          font-size: 20px;
+        }
+        & span:last-child {
+          font-size: 16px;
+          color: var(--darkblue);
+        }
+      }
+    }
+  }
+}
+/* end services section */
