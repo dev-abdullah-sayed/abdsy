@@ -135,7 +135,7 @@ body {
         display: none;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1px 50px 1px 50px 30px;
-        gap: 10px;
+        gap: 25px;
         width: 100%;
         position: absolute;
         top: 100%;
