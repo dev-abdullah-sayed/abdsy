@@ -187,6 +187,9 @@ section {
           display: flex;
           justify-content: center;
           align-items: center;
+          & img {
+            border-radius: 50%;
+          }
         }
         &:hover {
           cursor: pointer;
@@ -273,8 +276,10 @@ section {
             align-items: center;
             gap: 10px;
             & img {
+              display: flex;
               width: 45px;
               height: 45px;
+              border-radius: 50%;
             }
             & h3 {
               color: var(--blue);
@@ -519,7 +524,7 @@ section {
 }
 /* end portfolio section */
 .about-me {
-  height: 100&;
+  height: 100%;
   .about-me-content {
     display: flex;
     justify-content: space-between;
