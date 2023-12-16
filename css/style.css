@@ -1,0 +1,94 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap");
+/* icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+/* main css */
+:root {
+  /* colors */
+  --Lightest: #f4eeff;
+  --Lighter: #d1baff;
+  --Light: #af86ff;
+  --Primary: #8c52ff;
+  --Dark: #6239b3;
+  --Darker: #462980;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  background-color: var(--Lightest);
+  color: var(--Primary);
+}
+
+/* wlc section */
+.wlc {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 10px;
+}
+@media (max-width: 390px) {
+  .wlc {
+    text-align: center;
+    justify-content: flex-start;
+    padding: 0 40px;
+    padding-top: 100px;
+  }
+}
+.wlc h1 {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+}
+.wlc p {
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.wlc p:nth-child(3) {
+  font-size: 0.9rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+.wlc a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--Primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  z-index: 1;
+}
+.wlc a i {
+  background-color: var(--Lighter);
+  color: var(--Lightest);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.wlc::after {
+  content: "";
+  position: absolute;
+  background: url("../images/wlc-img.png") no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: calc(100% - 350px);
+  bottom: 0;
+  left: 0;
+}
