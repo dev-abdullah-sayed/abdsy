@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <title>عبدالله سيد</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -21,28 +21,28 @@
           <!-- navbar -->
           <nav class="navbar">
             <div class="nav-links">
-              <a href="#" class="nav-link">من أنا؟</a>
-              <a href="#" class="nav-link">خدماتي</a>
+              <a href="#about-me" class="nav-link">من أنا؟</a>
+              <a href="#services" class="nav-link">خدماتي</a>
               <a href="#" class="nav-link">أعمالي</a>
               <a href="#" class="nav-link">تواصل معي</a>
             </div>
             <div class="nav-links-mobile">
+              <a href="#about-me" class="nav-link">
+                <i class="fa-solid fa-user"></i>
+                <span>من أنا؟</span>
+              </a>
+              <a href="#services" class="nav-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>خدماتي</span>
+              </a>
               <a href="#" class="nav-link">
-								<i class="fa-solid fa-user"></i>
-								<span>من أنا؟</span>
-							</a>
+                <i class="fa-solid fa-briefcase"></i>
+                <span>أعمالي</span>
+              </a>
               <a href="#" class="nav-link">
-								<i class="fa-solid fa-gear"></i>
-								<span>خدماتي</span>
-							</a>
-              <a href="#" class="nav-link">
-								<i class="fa-solid fa-briefcase"></i>
-								<span>أعمالي</span>
-							</a>
-              <a href="#" class="nav-link">
-								<i class="fa-solid fa-comment-dots"></i>
-								<span>تواصل معي</span>
-							</a>
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>تواصل معي</span>
+              </a>
             </div>
           </nav>
           <!-- end navbar -->
@@ -58,16 +58,46 @@
     <!-- end header -->
     <!-- landing section -->
     <section class="landing">
-			<div class="container">
-				<div class="landing-content">
-					<div class="image"><img src="./images/hello-world-img.png" alt=""></div>
-					<h1 class="landing-title">مرحبًا بالعالم!</h1>
-					<p class="landing-bio">أنا عبدالله، مطور الواجهة الأمامية الذي سيعمل معك عن كثب لإنشاء موقع ويب أو تطبيق فريد من نوعه.</p>
-				</div>
-			</div>
-		</section>
+      <div class="container">
+        <div class="landing-content">
+          <div class="image"><img src="./images/hello-world-img.png" alt="" /></div>
+          <h1 class="landing-title">مرحبًا بالعالم!</h1>
+          <p class="landing-bio">أنا عبدالله، مطور الواجهة الأمامية الذي سيعمل معك عن كثب لإنشاء موقع ويب أو تطبيق فريد من نوعه.</p>
+        </div>
+      </div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"></use>
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+        </g>
+      </svg>
+    </section>
     <!-- end landing section -->
-
+    <!-- about me section -->
+    <section class="about-me" id="about-me">
+      <h2 class="sec-title">
+        من أنا؟
+        <span>about</span>
+      </h2>
+      <div class="container">
+        <div class="about-me-content">
+          <div class="image"><img src="./images/about-me-img.png" alt="profile-img" /></div>
+          <div class="text">
+            <h3>اسمي عبدالله سيد، وأنا ...</h3>
+            <p>
+              مطور الواجهة الأمامية الذي سيعمل معك عن كثب لإنشاء موقع ويب أو تطبيق فريد من نوعه. مُحب جدًا للتعليم ونشر ومشاركة كل ما أتعلمه من خلال حسابي على منصة <a href="#"><span>LinkedIn</span><i class="fa-solid fa-up-right-from-square"></i></a> .
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end about me section -->
+    <section class="services" id="services"></section>
     <!--  Font Awesome -->
     <script src="https://kit.fontawesome.com/878aec05dc.js" crossorigin="anonymous"></script>
   </body>
