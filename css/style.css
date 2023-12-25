@@ -253,7 +253,7 @@ section::before {
   position: relative;
 }
 .about-me .about-me-content {
-  margin-top: 50px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
