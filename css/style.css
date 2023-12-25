@@ -23,7 +23,7 @@
 }
 body {
   font-family: "Readex Pro", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--darker);
   background-color: var(--lightest);
@@ -33,6 +33,8 @@ a {
   text-decoration: none;
 }
 section {
+  width: 100%;
+  height: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   position: relative;
@@ -242,64 +244,127 @@ section::before {
   max-width: 350px;
   text-align: center;
 }
-
 /* end landing section */
 
 /* about me section */
 .about-me {
   background-color: var(--white);
-  width: 100%;
-  height: 100dvh;
-  position: relative;
 }
-.about-me .about-me-content {
-  margin-top: 25px;
+.about-me-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
+  flex-flow: row-reverse wrap;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
   gap: 20px;
 }
-.about-me .about-me-content .image {
+.about-me-content .image {
   width: 100%;
   max-width: 500px;
 }
-.about-me .about-me-content .image img {
-  width: 100%;
-}
-.about-me .about-me-content .text {
+
+.about-me-content .text {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.about-me-content .title {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-me-content .bio {
   width: 100%;
   max-width: 500px;
   line-height: 2;
-  font-size: 1rem;
+  font-weight: 500;
 }
-.about-me .about-me-content .text h3 {
-  font-size: 1.5rem;
-  color: var(--primary);
+
+.about-me-content .links {
+  display: flex;
+  gap: 20px;
 }
-.about-me .about-me-content .text a {
-  color: var(--primary);
-  display: inline-flex;
+.about-me-content .links .link {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-me-content .links .link a i {
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 3px;
+  color: var(--darker);
+  background-color: var(--lightest);
+  border-radius: 50%;
+  border: 2px solid var(--lighter);
 }
-@media (max-width: 576px) {
-  .about-me .about-me-content .text {
+
+/* skills */
+.skills-content {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 30px;
+}
+.skills-content .skill .tech {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.skills-content .skill .prog {
+  background-color: var(--lightest);
+  width: 100%;
+  height: 25px;
+}
+.skills-content .skill .prog .bar {
+  display: block;
+  height: 100%;
+  background-color: var(--primary);
+  position: relative;
+  &::after {
+    content: attr(prog);
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darker);
+    color: var(--lightest);
+    top: -34px;
+    right: -19px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    border-color: var(--darker) transparent transparent transparent;
+    top: -10px;
+    right: -4px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .about-me-content .text {
     text-align: center;
   }
-  .about-me .about-me-content .text h3 {
-    width: 100%;
-    text-align: center;
+  .about-me-content .bio {
+    font-size: 0.9rem;
+  }
+  .about-me-content .links {
+    justify-content: center;
+    align-items: center;
   }
 }
 /* end about me section */
 
 /* services section */
-.services {
-  width: 100%;
-  height: 100dvh;
-}
 /* end services section */
