@@ -16,11 +16,11 @@
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
   -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
-  outline: none !important;
 }
 body {
   font-family: "ReadexPro";
   background-color: var(--white);
+  color: var(--dark);
 }
 
 /* header */
@@ -51,7 +51,7 @@ body {
   font-weight: 500;
   transition: var(--function) color;
 }
-.header-content .navbar .nav-link:hover {
+.header-content .navbar .nav-link:hover:not(.cta) {
   color: var(--dark);
 }
 .header-content .navbar .cta {
@@ -63,6 +63,10 @@ body {
   padding: 0 1rem;
   color: var(--lightest);
   border-radius: 99px;
+  transition: var(--function) background-color;
+}
+.header-content .navbar .cta:hover {
+  background-color: var(--dark);
 }
 #mobile-nav {
   display: none;
@@ -133,3 +137,79 @@ body {
   background-color: var(--light);
 }
 /* end header */
+
+/* landing section */
+.landing-content {
+  height: calc(100dvh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-content .card {
+  background-color: var(--lightest);
+  width: 300px;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+.landing-content .profile-img {
+  position: absolute;
+  width: 150px;
+  top: -90px;
+  border-radius: 50%;
+  outline: 10px solid var(--white);
+}
+.landing-content .name {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+.landing-content .job {
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+.landing-content .techs .tech {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: var(--dark);
+  color: var(--lightest);
+  height: 20px;
+  padding: 0 0.5rem;
+  border-radius: 50px;
+}
+.landing-content .techs .html {
+  background-color: #E96228;
+}
+.landing-content .techs .css {
+  background-color: #2862E9;
+}
+.landing-content .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.landing-content .social-links a {
+  color: var(--primary);
+  transition: var(--function) color;
+}
+.landing-content .social-links a:hover {
+  color: var(--dark);
+}
+/* end landing section */
+/* about-me section */
+.about-me {
+  background-color: var(--lightest);
+}
+/* end about-me section */
