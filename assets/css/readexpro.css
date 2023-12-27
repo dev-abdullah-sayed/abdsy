@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "ReadexPro";
+  src: url("../fonts/ReadexPro-ExtraLight.ttf");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ReadexPro";
+  src: url("../fonts/ReadexPro-Light.ttf");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ReadexPro";
+  src: url("../fonts/ReadexPro-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ReadexPro";
+  src: url("../fonts/ReadexPro-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ReadexPro";
+  src: url("../fonts/ReadexPro-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ReadexPro";
+  src: url("../fonts/ReadexPro-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
